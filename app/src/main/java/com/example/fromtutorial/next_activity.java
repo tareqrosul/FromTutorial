@@ -3,6 +3,7 @@ package com.example.fromtutorial;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
@@ -15,7 +16,7 @@ import android.widget.TextView;
 public class next_activity extends AppCompatActivity {
     EditText edtx;
     TextView tv;
-    Button nextBTn1;
+    Button nextBTn1,next2;
     RelativeLayout RL;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +24,19 @@ public class next_activity extends AppCompatActivity {
         getSupportActionBar().hide();
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         setContentView(R.layout.activity_next_activity);
+        next2=findViewById(R.id.secondNext);
+
+        next2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(next_activity.this, MainActivity2.class);
+                startActivity(intent);
+            }
+        });
+
+
         nextBTn1=findViewById(R.id.btnHello);
         nextBTn1.setOnClickListener(new View.OnClickListener() {
             @Override

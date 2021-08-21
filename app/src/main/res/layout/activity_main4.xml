@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeL"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp">
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/harry"
+        android:text="Harry Potter"
+        android:checked="true"/>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lord"
+        android:text="Lord of the Rings"
+        android:layout_toRightOf="@+id/harry"
+        android:checked="true"/>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/matrix"
+        android:text="The Matrix"
+        android:layout_toRightOf="@id/lord"
+        android:checked="false"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/secondRL"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/relativeL"
+        android:layout_marginTop="20dp">
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:id="@+id/status"
+            android:layout_marginLeft="20dp"
+            android:layout_centerHorizontal="false">
+
+            <RadioButton
+                android:id="@+id/married"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Married"
+                android:layout_marginLeft="10dp"
+                android:buttonTint="@color/design_default_color_primary"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Single"
+                android:id="@+id/single"
+                android:layout_marginLeft="10dp"
+                android:buttonTint="@color/design_default_color_primary"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="In a relationship"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/inrel"
+                android:buttonTint="@color/design_default_color_primary"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/status"
+            android:layout_centerInParent="true"
+            android:text="Choose your current maritial status" />
+    </RelativeLayout>
+</RelativeLayout>
